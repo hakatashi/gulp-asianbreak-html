@@ -15,6 +15,14 @@
   },
   "author": "Koki Takahashi",
   "license": "MIT",
+  "keywords": [
+    "gulpplugin",
+    "asianbreak",
+    "breakline",
+    "HTML",
+    "Japanese",
+    "Chinese"
+  ],
   "bugs": {
     "url": "https://github.com/hakatashi/gulp-asianbreak-html/issues"
   },
