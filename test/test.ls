@@ -1,6 +1,7 @@
 require! {
   'fs'
   'path'
+  'gulp'
   'concat-stream'
   'vinyl': File
   'chai': {expect}
@@ -12,26 +13,12 @@ It = global.it
 
 describe 'Basic Usage' ->
   It 'complies normal HTML file into asianbreak-ed' (done) ->
-    stream = gulp-asianbreak-html!
-
-    stream.end new File {
-      cwd: \/
-      base: \/fixtures/
-      path: \/fixtures/test.html
-      contents: new Buffer '''
-        <p>
-          ほげ
-          ふが
-          ぴよ
-        </p>
-      '''
-    }
-
-    stream
+    gulp.src path.join(__dirname, \fixtures/test.html)
+    .pipe gulp-asianbreak-html!
     .pipe assert.length 1
     .pipe assert.first (file) ->
       expect file.is-buffer! .to.be.true
-      expect file.path .to.equal  \/fixtures/test.html
+      expect file.path .to.equal path.join __dirname, \fixtures/test.html
       expect file.contents.to-string! .to.equal '''
         <p>
           ほげふがぴよ
@@ -40,20 +27,11 @@ describe 'Basic Usage' ->
     .on \end done
 
   It 'correctly handles stream file' (done) ->
-    stream = gulp-asianbreak-html!
-
-    stream.end new File {
-      cwd: \/
-      base: \/fixtures/
-      path: \/fixtures/stream.html
-      contents: fs.create-read-stream path.join __dirname, \fixtures/stream.html
-    }
-
-    stream
+    gulp.src path.join(__dirname, \fixtures/test.html), {-buffer}
+    .pipe gulp-asianbreak-html!
     .pipe assert.length 1
     .pipe assert.first (file) ->
       expect file.is-stream! .to.be.true
-      expect file.path .to.equal  \/fixtures/stream.html
       file.contents.pipe concat-stream {encoding: \string} (data) ->
         expect data .to.equal '''
           <p>
