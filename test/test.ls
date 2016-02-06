@@ -52,3 +52,25 @@ describe 'Basic Usage' ->
     .pipe assert.first (file) ->
       expect file.is-null! .to.be.true
     .on \end done
+
+  It 'handles multiple files' (done) ->
+    gulp.src <[test.html test2.html]>.map -> path.join __dirname, \fixtures, it
+    .pipe gulp-asianbreak-html!
+    .pipe assert.length 2
+    .pipe assert.first (file) ->
+      expect file.is-buffer! .to.be.true
+      expect file.path .to.equal path.join __dirname, \fixtures/test.html
+      expect file.contents.to-string! .to.equal '''
+        <p>
+          ほげふがぴよ
+        </p>
+      '''
+    .pipe assert.second (file) ->
+      expect file.is-buffer! .to.be.true
+      expect file.path .to.equal path.join __dirname, \fixtures/test2.html
+      expect file.contents.to-string! .to.equal '''
+        <p>
+          吾輩は<strong>猫</strong>である。
+        </p>
+      '''
+    .on \end done
