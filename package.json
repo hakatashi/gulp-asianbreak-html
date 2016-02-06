@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/hakatashi/gulp-asianbreak-html#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "gulp": "^3.9.0",
     "gulp-livescript": "^3.0.0",
-    "livescript": "^1.4.0"
+    "gulp-mocha": "^2.2.0",
+    "livescript": "^1.4.0",
+    "stream-assert-gulp": "^0.4.9",
+    "vinyl": "^1.1.1"
   },
   "dependencies": {
     "asianbreak-html": "^1.0.0",

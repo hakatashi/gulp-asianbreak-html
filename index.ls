@@ -14,13 +14,13 @@ module.exports = (options) ->
       done null file
 
     else if file.is-buffer!
-      asianbreak.pipe concat-stream {encoding: \string} (data) ->
+      asianbreak.pipe concat-stream {encoding: \buffer} (data) ->
         file.contents = data
         done null file
 
       asianbreak.on \error done
 
-      asianbreak.end file
+      asianbreak.end file.contents
 
     else if file.is-stream!
       file.contents = file.contents.pipe asianbreak
