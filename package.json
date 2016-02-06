@@ -1,0 +1,30 @@
+{
+  "name": "gulp-asianbreak-html",
+  "version": "1.0.0",
+  "description": "Use asianbreak-html as a Gulp plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakatashi/gulp-asianbreak-html.git"
+  },
+  "author": "Koki Takahashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hakatashi/gulp-asianbreak-html/issues"
+  },
+  "homepage": "https://github.com/hakatashi/gulp-asianbreak-html#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-livescript": "^3.0.0",
+    "livescript": "^1.4.0"
+  },
+  "dependencies": {
+    "asianbreak-html": "^1.0.0",
+    "concat-stream": "^1.5.1",
+    "through2": "^2.0.0",
+    "xtend": "^4.0.1"
+  }
+}
