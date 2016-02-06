@@ -7,9 +7,10 @@ require! {
 
 module.exports = (options) ->
   options = extend {} options
-  asianbreak = new Asianbreak options
 
   return through.obj (file, encoding, done) ->
+    asianbreak = new Asianbreak options
+
     if file.is-null!
       done null file
 
