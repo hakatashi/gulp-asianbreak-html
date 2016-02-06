@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Use asianbreak-html as a Gulp plugin",
   "main": "index.js",
+  "files": [
+    "*.js"
+  ],
   "scripts": {
     "test": "gulp test"
   },
