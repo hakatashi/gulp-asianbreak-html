@@ -1,3 +1,26 @@
+# DEPRECATED
+
+Use [vinyl-transform](https://www.npmjs.com/package/vinyl-transform) instead.
+
+## Example
+
+```js
+const gulp = require('gulp');
+const transform = require('vinyl-transform');
+const asianbreak = require('asianbreak-html');
+
+gulp.task('build', () => {
+  return gulp.src('some.html')
+    .pipe(transform(asianbreak))
+    .pipe(gulp.dest('.'));
+
+  // With options
+  return gulp.src('some.html')
+    .pipe(transform(asianbreak.bind(null, {foo: 42})))
+    .pipe(gulp.dest('.'));
+});
+```
+
 # gulp-asianbreak-html
 
 [![Build Status][travis-image]][travis-url]
