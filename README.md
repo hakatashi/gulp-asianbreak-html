@@ -14,7 +14,7 @@ gulp.task('build', () => {
     .pipe(transform(asianbreak))
     .pipe(gulp.dest('.'));
 
-  // With options
+  // Or, with options
   return gulp.src('some.html')
     .pipe(transform(asianbreak.bind(null, {foo: 42})))
     .pipe(gulp.dest('.'));
