@@ -1,5 +1,7 @@
 # DEPRECATED
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hakatashi/gulp-asianbreak-html.svg)](https://greenkeeper.io/)
+
 Use [vinyl-transform](https://www.npmjs.com/package/vinyl-transform) instead.
 
 ## Example
