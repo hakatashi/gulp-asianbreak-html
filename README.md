@@ -1,7 +1,5 @@
 # DEPRECATED
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/hakatashi/gulp-asianbreak-html.svg)](https://greenkeeper.io/)
-
 Use [vinyl-transform](https://www.npmjs.com/package/vinyl-transform) instead.
 
 ## Example
@@ -28,6 +26,7 @@ gulp.task('build', () => {
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
 [![Dependency Status][gemnasium-image]][gemnasium-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/hakatashi/gulp-asianbreak-html.svg)](https://greenkeeper.io/)
 
 [travis-image]: https://travis-ci.org/hakatashi/gulp-asianbreak-html.svg?branch=master
 [travis-url]: https://travis-ci.org/hakatashi/gulp-asianbreak-html
