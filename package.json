@@ -38,7 +38,7 @@
   "dependencies": {
     "asianbreak-html": "^1.0.0",
     "concat-stream": "^2.0.0",
-    "through2": "^2.0.0",
+    "through2": "^4.0.2",
     "xtend": "^4.0.1"
   }
 }
